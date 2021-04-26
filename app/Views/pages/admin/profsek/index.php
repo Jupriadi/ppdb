@@ -1,0 +1,161 @@
+<?= $this->extend('templates/layout/layout'); ?>
+
+<?= $this->section('content') ?>
+  
+
+<script type="text/javascript">
+     $(".sidebar-item").removeClass("active");
+     $("#profsek").addClass("active");
+</script>
+<hr>
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-xl-4">
+            <div class="card shadow-sm">
+                <div class="card-header">
+                    <h4>Logo Sekolah</h4>
+                </div>
+                <div class="card-body">
+                    <div class="logo-box mx-auto" style="width:150px">
+                        <img width="100%" src="/assets/img/sekolah.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="card shadow-sm">
+                <div class="card-header">
+                    <h4>Kontak Sekolah</h4>
+                </div>
+                <div class="card-body">
+                    <div class="form-group">
+                        <label for=""><i class="bi bi-whatsapp"></i> HP / WA</label>
+                        <div>
+                            <?= $profil['hp'] ?>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for=""><i class="bi bi-envelope-fill"></i> Email</label>
+                        <div>
+                        <?= $profil['email'] ?>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for=""><i class="bi bi-globe"></i> Website</label>
+                        <div>
+                        <?= $profil['website'] ?>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-xl-8">
+            <div class="card shadow-sm">
+                <div class="card-header">
+
+                    <span class="fs-5 ps-4"><strong>Detail Sekolah</strong></span>
+
+                    <a href="/panel/profsek/<?= $profil['id'] ?>" class="btn d-none d-md-inline btn-primary btn-sm end-0 me-4 position-absolute rounded-pill px-3"><i class="bi bi-pen"></i> Edit</a>
+
+                   
+                </div>
+                <div class="card-body  px-0 px-md-4">
+                    <div class="container">
+                  
+                        <div class="row">
+                            <div class="col-md-4">
+                                Nama Sekolah
+                            </div>
+                            <div class="col-md-8">
+                                : <?= $profil['namasekolah'] ?>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-4">
+                                Nomor Pokok Sekolah Nasional
+                            </div>
+                            <div class="col-md-8">
+                                : <?= $profil['npsn'] ?>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-4">
+                                Nomor Induk Sekolah
+                            </div>
+                            <div class="col-md-8">
+                                : <?= $profil['nis'] ?>
+                            </div>
+                        </div>
+                        
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-4">
+                                Nomor Statistik Sekolah
+                            </div>
+                            <div class="col-md-8">
+                                : <?= $profil['nss'] ?>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-4">
+                                HP / WA
+                            </div>
+                            <div class="col-md-8">
+                                : <?= $profil['hp'] ?>
+                            </div>
+                        </div>
+                        <hr>
+                        <strong>Alamat Sekolah</strong>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-4">
+                               Provinsi
+                            </div>
+                            <div class="col-md-8">
+                                : <?= $profil['provinsi'] ?>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-4">
+                               Kabupaten /Kota
+                            </div>
+                            <div class="col-md-8">
+                                : <?= $profil['kabupaten'] ?>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-4">
+                               Kecamatan
+                            </div>
+                            <div class="col-md-8">
+                                : <?= $profil['kecamatan'] ?>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-4">
+                               Kelurahan / Desa
+                            </div>
+                            <div class="col-md-8">
+                                : <?= $profil['desa'] ?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="postion-absolute shadow d-md-none position-fixed me-4 mb-4 bg-success rounded-circle end-0 bottom-0"  style="width: 50px;height: 50px;">
+    <div class="positon-relative">
+        <a href="/panel/editprofsek" class="text-light fs-3 position-absolute top-50 start-50 translate-middle">
+            <i class="bi bi-pencil-square"></i>
+        </a>
+    </div>
+</div>
+
+<?= $this->endSection() ?>
