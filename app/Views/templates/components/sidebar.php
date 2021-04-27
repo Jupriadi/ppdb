@@ -159,7 +159,14 @@
                     </a>
                 </li>
 
-                <!-- <li class="sidebar-item  has-sub">
+                <li class="sidebar-item  ">
+                    <a href="table.html" class='sidebar-link'>
+                        <i class="bi bi-grid-1x2-fill"></i>
+                        <span>Asset Madrasah</span>
+                    </a>
+                </li>
+
+                <li class="sidebar-item  has-sub">
                     <a href="#" class='sidebar-link'>
                         <i class="bi bi-pen-fill"></i>
                         <span>Form Editor</span>
@@ -178,13 +185,6 @@
                             <a href="form-editor-tinymce.html">TinyMCE</a>
                         </li>
                     </ul>
-                </li>
-
-                <li class="sidebar-item  ">
-                    <a href="table.html" class='sidebar-link'>
-                        <i class="bi bi-grid-1x2-fill"></i>
-                        <span>Table</span>
-                    </a>
                 </li>
 
                 <li class="sidebar-item  ">
@@ -356,7 +356,7 @@
                         <i class="bi bi-cash"></i>
                         <span>Donate</span>
                     </a>
-                </li> -->
+                </li>
 
             </ul>
         </div>

@@ -4,37 +4,37 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class ProfsekModels extends Model
+class GuruModels extends Model
 {
 	protected $DBGroup              = 'default';
-	protected $table                = 'profsek';
-	protected $primaryKey           = 'id';
+	protected $table                = 'guru';
+	protected $primaryKey           = 'idGuru';
 	protected $useAutoIncrement     = true;
 	protected $insertID             = 0;
 	protected $returnType           = 'array';
 	protected $useSoftDelete        = false;
 	protected $protectFields        = true;
 	protected $allowedFields        = [
-			'namsekolah',
-			'npsn',
-			'nis',
-			'nss',
-			'hp',
-			'email',
-			'website',
-			'provinsi',
-			'kabupaten',
-			'kecamatan',
-			'desa',
-			'logo',
-		
-		];
+							'niy',
+							'status',
+							'namaguru',
+							'kelamin',
+							'alamat',
+							'tgllahir',
+							'hp',
+							'email',
+							'pendidikan',
+							'jurusan',
+							'gelar',
+							'pt',
+							'photo',
+						];
 
 	// Dates
-	protected $useTimestamps        = true;
+	protected $useTimestamps        = True;
 	protected $dateFormat           = 'datetime';
-	protected $createdField         = 'tgl_daftar';
-	protected $updatedField         = 'tgl_ubah';
+	protected $createdField         = 'tgldaftarguru';
+	protected $updatedField         = 'tglubahguru';
 
 	// Validation
 	protected $validationRules      = [];

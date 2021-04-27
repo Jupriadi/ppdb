@@ -20,6 +20,7 @@ class Profsek extends Seeder
                         'kabupaten'=>'Lombok Timur',
                         'kecamatan'=>'sembalun',
                         'desa'=>'sembalun bumbung',
+                        'logo' =>'sekolah.png',
                         'tgl_daftar'=> date('Y-m-d'),
                 ];
 

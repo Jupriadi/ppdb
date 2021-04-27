@@ -9,15 +9,19 @@
 </script>
 <hr>
 <div class="container">
+    <?php if($profil==null): ?>
+        <h4>Data Profil Sekolah Msih Kosong</h4>
+        <p>Jalankan <strong>php spark db:seed Profsek</strong> di terminal</p>
+    <?php else: ?>
     <div class="row">
-        <div class="col-12 col-xl-4">
+        <div class="col-12 col-xl-4 px-0 px-md-3">
             <div class="card shadow-sm">
                 <div class="card-header">
                     <h4>Logo Sekolah</h4>
                 </div>
                 <div class="card-body">
                     <div class="logo-box mx-auto" style="width:150px">
-                        <img width="100%" src="/assets/img/sekolah.png" alt="">
+                        <img width="100%" src="/assets/img/<?= $profil['logo'] ?>" alt="">
                     </div>
                 </div>
             </div>
@@ -48,7 +52,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-12 col-xl-8">
+        <div class="col-12 col-xl-8  px-0 px-md-3">
             <div class="card shadow-sm">
                 <div class="card-header">
 
@@ -98,15 +102,6 @@
                             </div>
                         </div>
                         <hr>
-                        <div class="row">
-                            <div class="col-md-4">
-                                HP / WA
-                            </div>
-                            <div class="col-md-8">
-                                : <?= $profil['hp'] ?>
-                            </div>
-                        </div>
-                        <hr>
                         <strong>Alamat Sekolah</strong>
                         <hr>
                         <div class="row">
@@ -152,10 +147,10 @@
 </div>
 <div class="postion-absolute shadow d-md-none position-fixed me-4 mb-4 bg-success rounded-circle end-0 bottom-0"  style="width: 50px;height: 50px;">
     <div class="positon-relative">
-        <a href="/panel/editprofsek" class="text-light fs-3 position-absolute top-50 start-50 translate-middle">
+        <a href="/panel/profsek/<?= $profil['id'] ?>" class="text-light fs-3 position-absolute top-50 start-50 translate-middle">
             <i class="bi bi-pencil-square"></i>
         </a>
     </div>
 </div>
-
+<?php endif; ?>
 <?= $this->endSection() ?>

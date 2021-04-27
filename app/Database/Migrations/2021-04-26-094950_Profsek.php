@@ -65,6 +65,10 @@ class Profsek extends Migration
 				'type'              => 'varchar',
                 'constraint'        => '50',
 			],
+			'logo' => [
+				'type'              => 'varchar',
+                'constraint'        => '100',
+			],
 
 			'tgl_daftar' => [
 					'type' => 'DATETIME',

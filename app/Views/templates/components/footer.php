@@ -45,6 +45,7 @@
     <script src="/assets/js/apexcharts.js"></script>
     <script src="/assets/js/dashboard.js"></script>
     <script src="/assets/js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js" integrity="sha512-T/tUfKSV1bihCnd+MxKD0Hm1uBBroVYBOYSk1knyvQ9VyZJpc/ALb4P0r6ubwVPSGB2GvjeoMAJJImBG12TiaQ==" crossorigin="anonymous"></script>
     <script>
         function preview(){
                 const logo = document.querySelector('#logo');
@@ -60,6 +61,12 @@
                     prev.src = e.target.result;
                 }
       };
+
+      $('#date').datepicker({
+		format: 'yyyy-mm-dd',
+		daysOfWeekDisabled: "0",
+		autoclose:true
+    });
     </script>
 </body>
 

@@ -20,11 +20,10 @@
                 <div class="card-body"> 
                     <div class="logo-box mx-auto" style="width:150px">
                         
-                        
-                    <label for="logo" class="form-label logoLabel d-none"></label>
+                        <label for="logo" class="form-label logoLabel d-none"></label>
                         <div class="fileUpload" width="80%;overflow:hidden;">
                             <input class="upload" style="height:100%" type="file" onchange="preview()" id="logo" name="logo">
-                            <img src="/assets/img/<?= $profil['logo'] ?>" class="img-thumbnail img-preview img-fluid" style="width:100%" alt="">
+                            <img src="/assets/img/<?= $profil['logo'] ?>" class="img-thumbnail img-preview img-fluid" style="width:100%" alt="Logo">
                             <span></span>
                         </div>
                     </div>
@@ -86,7 +85,7 @@
                                 Nomor Pokok Sekolah Nasional
                             </div>
                             <div class="col-md-8">
-                                <input value="<?= $profil['namasekolah'] ?>" name="npsn" type="text" class="form-control rounded-pill">
+                                <input value="<?= $profil['npsn'] ?>" name="npsn" type="text" class="form-control rounded-pill">
                             </div>
                         </div>
                         <hr>
@@ -109,14 +108,7 @@
                             </div>
                         </div>
                         <hr>
-                        <div class="row">
-                            <div class="col-md-4">
-                                HP / WA
-                            </div>
-                            <div class="col-md-8">
-                                <input  value="<?= $profil['hp'] ?>" name="hp"  type="text" class="form-control rounded-pill">
-                            </div>
-                        </div>
+                        <strong>Alamat Sekolah</strong>
                         <hr>
                         <div class="row">
                             <div class="col-md-4">
@@ -126,8 +118,6 @@
                                 <input type="text"  value="<?= $profil['provinsi'] ?>" name="provinsi"  class="form-control rounded-pill">
                             </div>
                         </div>
-                        <hr>
-                        <strong>Alamat Sekolah</strong>
                         <hr>
                         <div class="row">
                             <div class="col-md-4">
@@ -157,7 +147,7 @@
                         </div>
                         <hr>
                         <div class="row text-center d-md-none d-flex">
-                            <button type="submit" class="btn btn-success rounded-pill py-2">  Simpan</button>
+                            <button type="submit" class="btn btn-success rounded-pill py-2" name="simpan">  Simpan</button>
 
                             <a class="mt-3" href="/panel/profsek">Kembali</a>
                         </div>
