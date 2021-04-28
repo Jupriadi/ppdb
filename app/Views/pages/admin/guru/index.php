@@ -11,10 +11,26 @@
     <section class="section">
         <div class="row" id="table-striped">
             <div class="col-12">
-                <div class="card shadow">
-                    <div class="card-header">
-                        <strong class="card-title">Tabel Data Guru</strong>
-                        <a href="/panel/formguru" class="btn  btn-sm bg-primary text-light position-absolute end-0 me-4 top-0 mt-4 rounded-pill d-none d-md-block"><i class="bi bi-plus-circle-fill"></i> Tambah Data</a>
+                <div class="card shadow ">
+                    <div class="card-header bg-primary text-light mb-3">
+                        <strong class="card-title"> <i class="bi bi-person-fill"></i> Tabel Data Guru</strong>
+                        <a href="/panel/formguru" class="btn  btn-sm btn-light position-absolute end-0 me-4 top-0 mt-4 rounded-pill d-none d-md-block"><i class="bi bi-plus-circle-fill"></i> Tambah Data</a>
+                    </div>
+                    <div class="row container mt-3">
+                        <div class="col-8 col-7 px-2 px-md-2 col-md-5 mb-3">
+                            <div class="input-group mb-2 position-relative">
+                                <input type="text" class="form-control rounded-pill" placeholder="Cari">
+                                <!-- <span class="position-absolute top-50 start-0"><i class="bi bi-search"></i></span> -->
+                            </div>
+                        </div>
+                        <div class="col-4 p-0 col-md-3 col-md-2">
+                            <select name="q" class="form-select form-control" id="">
+                                <option value="">Jenis Kelamin</option>
+                                <option value="Laki laki">Laki-laki</option>
+                                <option value="Perempuan">Perempuan</option>
+                            </select>
+                        </div>
+                        <hr>
                     </div>
                     <div class="card-content container pb-3">
                         <div class="d-md-none d-block">

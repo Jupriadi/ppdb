@@ -58,14 +58,14 @@
         </div>
         <div class="col-12 col-xl-8">
             <div class="card shadow-sm">
-                <div class="card-header">
+                <div class="card-header bg-primary text-light mb-3">
                     <span class="fs-5 ps-4"><strong>Detail Sekolah</strong></span>
 
                     <span class="position-absolute rounded-pill end-0 me-5 d-none d-md-inline">
 
-                        <a href="/panel/profsek" class="me-3 ">  <i class="bi bi-arrow-left"></i> Kembali</a>
+                        <a href="/panel/profsek" class="me-3 text-light ">  <i class="bi bi-arrow-left"></i> Kembali</a>
 
-                        <button type="submit" class="btn  btn-primary btn-sm rounded-pill px-3 py-1"><i class="bi bi-save-fill"></i> Simpan</button>
+                        <button type="submit" class="btn  btn-light btn-sm rounded-pill px-3 py-1"><i class="bi bi-save-fill"></i> Simpan</button>
                     </span>
                 </div>
                 <div class="card-body">

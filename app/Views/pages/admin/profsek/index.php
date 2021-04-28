@@ -54,11 +54,11 @@
         </div>
         <div class="col-12 col-xl-8  px-0 px-md-3">
             <div class="card shadow-sm">
-                <div class="card-header">
+                <div class="card-header mb-3 bg-primary text-light">
 
                     <span class="fs-5 ps-4"><strong>Detail Sekolah</strong></span>
 
-                    <a href="/panel/profsek/<?= $profil['id'] ?>" class="btn d-none d-md-inline btn-primary btn-sm end-0 me-4 position-absolute rounded-pill px-3"><i class="bi bi-pen"></i> Edit</a>
+                    <a href="/panel/profsek/<?= $profil['id'] ?>" class="btn d-none d-md-inline btn-light btn-sm end-0 me-4 position-absolute rounded-pill px-3"><i class="bi bi-pen"></i> Edit</a>
 
                    
                 </div>

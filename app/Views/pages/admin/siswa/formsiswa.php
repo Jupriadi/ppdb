@@ -91,7 +91,7 @@
                             <div class="row text-center  my-3">
                                 <button type="submit" class="btn btn-success rounded-pill py-2">  Simpan</button>
 
-                                <a class="mt-3" href="/panel/guru">Kembali</a>
+                                <a class="mt-3" href="/panel/siswa">Kembali</a>
                             </div>
                         </div>
                     </div>

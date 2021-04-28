@@ -2,8 +2,10 @@
     <div class="sidebar-wrapper active">
         <div class="sidebar-header">
             <div class="d-flex justify-content-between">
-                <div class="logo">
-                    <a href="index.html"><img src="/assets/img/logo.png" alt="Logo" srcset=""></a>
+                <div class="logo" style="width:100%">
+                    <a href="/panel">
+                        <img src="/assets/img/saidalamin.png" alt="Logo" style="width:100%;height:90%" >
+                    </a>
                 </div>
                 <div class="toggler">
                     <a href="#" class="sidebar-hide d-xl-none d-block"><i class="bi bi-x bi-middle"></i></a>
