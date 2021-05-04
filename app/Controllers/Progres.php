@@ -6,6 +6,7 @@ use App\Controllers\BaseController;
 use App\Models\ProfsekModels;
 use App\Models\GuruModels;
 use App\Models\SiswaModels;
+use App\Models\SlideModels;
 
 class Progres extends BaseController
 {
@@ -14,6 +15,7 @@ class Progres extends BaseController
 		$this->profsek = new ProfsekModels;
 		$this->guru = new GuruModels;
 		$this->siswa = new SiswaModels;
+		$this->slide = new SlideModels;
 	}
 	
     public function ubahprofil()
@@ -60,67 +62,6 @@ class Progres extends BaseController
             session()->setFlashdata('saved','Data Berhasil Disimpan..!');
             return redirect()->to('/panel/profsek/');
         }
-    }
-
-    public function simpanguru($id=false)
-    {
-        $data=[];
-        $posts = $this->request->getPost();
-        $photo = $this->request->getFile('photo');
-        // dd($photo);
-        foreach($posts as $post => $value):
-            $data[$post] = htmlspecialchars($value);
-
-        endforeach;
-
-        // kelola gambar
-        
-        
-        if(!$id == false):
-            $data['idGuru'] = $id;
-            $find = $this->guru->find($id);
-            if($photo == ""):
-                $data['photo'] = $find['photo'];
-            else:
-                $namaphoto = $photo->getRandomName();
-                $data['photo'] = $namaphoto;
-                if(!($find['photo']=='guru.png')):
-                    unlink('assets/photoguru/'.$find['photo']);
-                endif;
-                $photo->move('assets/photoguru/',$namaphoto);
-            endif;
-
-        else:
-            if($photo == ""):
-                $data['photo'] = 'guru.png';
-            else:
-                $namaphoto = $photo->getRandomName();
-                $data['photo'] = $namaphoto;
-                $photo->move('assets/photoguru/',$namaphoto);
-            endif;
-
-        endif;
-
-        $simpan = $this->guru->save($data);
-
-        if ($simpan):
-            session()->setFlashdata('saved','Guru Berhasil Ditambah..!');
-            return redirect()->to('/panel/guru/');
-        endif;
-        
-    }
-
-    public function hapusguru($id)
-    {
-        $find = $this->guru->find($id);
-        // dd($find);
-        if(!($find['photo'] == 'guru.png')){
-            unlink('assets/photoguru/'.$find['photo']);
-        }
-
-        $this->guru->delete($id);
-        session()->setFlashdata('saved','Data Berhasil Dihapus..!');
-        return redirect()->to('/panel/guru/');
     }
 
     public function simpansiswa($id = false)
@@ -177,6 +118,21 @@ class Progres extends BaseController
         $this->siswa->delete($id);
         session()->setFlashdata('saved','Data Berhasil Dihapus..!');
         return redirect()->to('/panel/siswa/');
+    }
+    public function simpanslide($id=false)
+    {
+        $file = $this->request->getFile('photo');
+        $photoname = $file->getRandomName();
+        $pindah = $file->move('assets/slide/',$photoname);
+        $data = [
+            'deskripsi' =>  $this->request->getVar('desk'),
+            'subdeskripsi' =>  $this->request->getVar('subdesk'),
+            'file' =>  $photoname,
+        ];
+
+        $this->slide->save($data);
+        session()->setFlashdata('saved','Data Berhasil Disimpan..!');
+        return redirect()->to('/panel/slide/');
     }
 
 }

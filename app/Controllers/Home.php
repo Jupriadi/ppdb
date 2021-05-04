@@ -9,6 +9,6 @@ class Home extends BaseController
 		$data = [
 			'judul' => 'SDIT Said Alamin',
 		];
-		return view('/pages/user/index');
+		return view('/pages/user/index',$data);
 	}
 }

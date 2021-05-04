@@ -6,7 +6,7 @@
                     </div>
                     <div class="float-end">
                         <p>Crafted with <span class="text-danger"><i class="bi bi-heart"></i></span> by <a
-                                href="http://ahmadsaugi.com">Jupriadi</a></p>
+                                href="https://web.facebook.com/yadi.f.joefhcmbaloenboyz" terget="_blank">Jupriadi</a></p>
                     </div>
                 </div>
             </footer>
@@ -45,8 +45,26 @@
     <script src="/assets/js/apexcharts.js"></script>
     <script src="/assets/js/dashboard.js"></script>
     <script src="/assets/js/main.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js" integrity="sha512-T/tUfKSV1bihCnd+MxKD0Hm1uBBroVYBOYSk1knyvQ9VyZJpc/ALb4P0r6ubwVPSGB2GvjeoMAJJImBG12TiaQ==" crossorigin="anonymous"></script>
+    <script src="/assets/cropper/cropper.js"></script>
+    <script src="/assets/js/bootstrap-datepicker.min.js"></script>
+    <script>   
+        AOS.init(); 
+    </script>
     <script>
+        $( window ).scroll( function () {
+    if ( $(document).scrollTop() > 50 ) {
+      $(".usernav").addClass("fixed-top bg-light navbar-light ");
+      $(".usernav").removeClass("navbar-dark");
+
+
+    } else {
+      $(".usernav").removeClass("fixed-top bg-light navbar-light");
+      $(".usernav").addClass("navbar-dark");
+      $("#tgr-nav").removeClass("btn-outline-dark");
+      $("#tgr-nav").addClass("btn-outline-light");
+    }
+  });
+
         function preview(){
                 const logo = document.querySelector('#logo');
                 const label = document.querySelector('.logoLabel');

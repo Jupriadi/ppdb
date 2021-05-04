@@ -1,0 +1,158 @@
+html,body{
+    height:100%
+}
+.min-hg-100{
+    min-height: 100%;
+}
+.min-hg-60{
+    min-height: 60%;
+}
+.min-hg-80{
+    min-height: 80%;
+}
+.hg-100{
+    height: 100%;
+}
+.myslide{
+    height:80%;
+    overflow:hidden;
+}
+
+.hg-100{
+    height:100%;
+}
+.w-50{
+    width:50%;
+}
+.w-fix-50{
+    width:50px;
+}
+.w-fix-100{
+    width:100px;
+}
+.w-100{
+    width: 100%;
+}
+.title{
+    font-family:Fjalla One;
+}
+section{
+    padding:15px;
+}
+div.info-box{
+    background: rgb(239,255,179);
+    background: linear-gradient(357deg, rgba(239,255,179,0.7875525210084033) 0%, rgba(232,255,238,0.7595413165266106) 100%);
+    
+}.info-title{
+    font-family:Oswald;
+    text-transform: uppercase;
+}
+.info-box button{
+    
+    background: rgb(193,208,2);
+    background: linear-gradient(90deg, rgba(193,208,2,1) 0%, rgba(211,221,2,1) 100%);
+}
+.info-box button:hover{
+    box-shadow:1px 1px 8px rgb(196, 196, 196);
+}
+  .info-box:hover{
+   box-shadow:1px 1px 8px rgb(196, 196, 196);
+}.img-tentang-box{
+    width:200px;
+    height:150px;
+    overflow:hidden;
+    transform: rotate(0deg);
+    transition: all 0.5s ease-in-out;
+}
+.img-tentang-box:hover{
+    z-index: 1;
+    transform:rotate(360deg)  scale(1.5);
+}
+.img-tentang-box img:hover{
+
+    box-shadow: 2px 2px 8px black;
+}
+.img-3{
+    margin-top:120px;
+    margin-left:100px;
+    transform: rotate(-30deg);
+}
+.img-2{
+    margin-top:90px;
+    margin-left:-60px;
+    transform: rotate(20deg);
+}
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+/* Place the timelime to the left */
+.timeline::after {
+    left: 10px;
+  content: '';
+  position: absolute;
+  width: 4px;
+  background-color: white;
+  top: 0;
+  bottom: 0;
+  margin-left: -3px;
+    }
+    
+    /* Full-width containers */
+    .timelinebox {
+    width: 100%;
+    padding-left: 40px;
+    padding-right: 25px;
+    
+  position: relative;
+  background-color: inherit;
+    }
+    
+    /* Make sure that all arrows are pointing leftwards */
+    .timelinebox::before {
+    /* left: 10px; */
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+    }
+    .timelinebox:after {
+        content: '';
+        position: absolute;
+        width: 25px;
+        height: 25px;
+        /* right: -20px; */
+        background-color: white;
+        /* border: 4px solid #FF9F55; */
+        top: 15px;
+        border-radius: 50%;
+        z-index: 1;
+      }
+      
+    /* Make sure all circles are at the same spot */
+    .left::after, .right::after {
+    left: -3px;
+    }
+    
+    /* Make all right containers behave like the left ones */
+    .right {
+    left: 0%;
+    }
+    .right::before {
+        content: " ";
+        height: 0;
+        position: absolute;
+        top: 18px;
+        width: 0;
+        z-index: 1;
+        left: 30px;
+        border: medium solid white;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent white transparent transparent;
+      }
+    .content {
+        background-color: white;
+        color:indigo;
+        position: relative;
+        border-radius: 6px;
+      }

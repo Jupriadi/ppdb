@@ -7,6 +7,11 @@ use CodeIgniter\HTTP\RequestInterface;
 use CodeIgniter\HTTP\ResponseInterface;
 use Psr\Log\LoggerInterface;
 
+use App\Models\ProfsekModels;
+use App\Models\GuruModels;
+use App\Models\SiswaModels;
+use App\Models\MapelModels;
+
 /**
  * Class BaseController
  *
@@ -28,7 +33,17 @@ class BaseController extends Controller
 	 * @var array
 	 */
 	protected $helpers = ['form','array'];
-
+	protected $profsek;
+	protected $guru;
+	protected $siswa;
+	protected $mapel;
+	public function __construct()
+	{
+		$this->profsek = new ProfsekModels;
+		$this->guru = new GuruModels;
+		$this->siswa = new SiswaModels;
+		$this->mapel = new MapelModels;
+	}
 	/**
 	 * Constructor.
 	 *
@@ -46,5 +61,24 @@ class BaseController extends Controller
 		//--------------------------------------------------------------------
 		// E.g.: $this->session = \Config\Services::session();
 	}
+	public function cari($cari, $keyword){
+
+		$keyword = $this->request->getVar('q');
+		if($keyword == false):
+			$datasiswa = $this->$cari;
+		else:
+			$datasiswa = $this->$cari->like('nama'.$cari,$keyword);
+		endif;
+
+		return $datasiswa;
+		
+	}
 	
+	public function mapelguru(){
+
+        $condition="guru.idGuru=mapel.gurumapel OR mapel.gurumapel=''";
+        $mapel = $this->mapel->join('guru',$condition);
+
+		return $mapel;
+	}
 }

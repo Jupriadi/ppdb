@@ -149,22 +149,28 @@
                 </li>
 
                 <li class="sidebar-item  " id="guru">
-                    <a href="/panel/guru" class='sidebar-link'>
+                    <a href="/guru" class='sidebar-link'>
                         <i class="bi bi-people-fill"></i>
                         <span>Data Guru</span>
                     </a>
                 </li>
                 <li class="sidebar-item  " id="siswa">
-                    <a href="/panel/siswa" class='sidebar-link'>
+                    <a href="/siswa" class='sidebar-link'>
                         <i class="bi bi-people"></i>
                         <span>Data Siswa</span>
                     </a>
                 </li>
 
-                <li class="sidebar-item  ">
-                    <a href="table.html" class='sidebar-link'>
+                <li class="sidebar-item" id="mapel">
+                    <a href="/mapel" class='sidebar-link'>
+                        <i class="bi bi-file-text-fill"></i>
+                        <span>Data Mapel</span>
+                    </a>
+                </li>
+                <li class="sidebar-item" id="slide">
+                    <a href="/panel/slide" class='sidebar-link'>
                         <i class="bi bi-grid-1x2-fill"></i>
-                        <span>Asset Madrasah</span>
+                        <span>Slide Show</span>
                     </a>
                 </li>
 

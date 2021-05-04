@@ -7,7 +7,7 @@
      $("#guru").addClass("active");
 </script>
 <hr>
-<form method="post" action="/progres/simpanguru/<?= $edit>0 ? $guru['idGuru'] : '' ;?>" enctype="multipart/form-data">
+<form method="post" action="/controlguru/simpan/<?= $edit>0 ? $guru['idGuru'] : '' ;?>" enctype="multipart/form-data">
     <?= csrf_field() ?>
     <div class="container">
         <div class="row">
@@ -17,14 +17,12 @@
                         <h4>Photo Guru</h4>
                     </div>
                     <div class="card-body"> 
-                        <div class="logo-box mx-auto">
                             
-                            <label for="logo" class="form-label logoLabel d-none"></label>
-                            <div class="fileUpload rounded-circle">
-                                <input class="upload" style="height:100%" type="file" onchange="preview()" id="logo" name="photo">
-                                <img src="/assets/photoguru/<?= $edit>0 ? $guru['photo'] : 'guru.png' ;?>" class="img-thumbnail img-preview img-fluid" style="width:100%;min-height:100%" alt="Logo">
-                                <span></span>
-                            </div>
+                        <label for="logo" class="form-label logoLabel  d-none"></label>
+                        <div class="fileUpload logo-box p-0 mx-auto rounded-circle">
+                            <input class="upload" style="height:100%" type="file" onchange="preview()" id="logo" name="photo">
+                            <img src="/assets/photoguru/<?= $edit>0 ? $guru['photo'] : 'guru.png' ;?>" class="img-thumbnail img-preview img-fluid" style="width:100%;min-height:100%" alt="Logo">
+                            <span></span>
                         </div>
                     </div>
                 </div>

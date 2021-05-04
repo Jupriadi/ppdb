@@ -35,6 +35,21 @@ $routes->setAutoRoute(true);
 $routes->get('/', 'Home::index');
 $routes->get('/panel', 'Admin\Panel::index');
 $routes->get('/panel/(:any)', 'Admin\Panel::$1');
+// mata pelajaran
+$routes->get('/mapel', 'Mapel\Mapel::index');
+$routes->get('/mapel/(:any)', 'Mapel\Mapel::$1');
+$routes->add('/controlmapel', 'Mapel\Controlmapel::index');
+$routes->add('/controlmapel/(:any)', 'Mapel\Controlmapel::$1');
+//guru
+$routes->get('/guru', 'Guru\Guru::index');
+$routes->get('/guru/(:any)', 'Guru\Guru::$1');
+$routes->add('/controlguru/(:any)', 'Guru\Controlguru::$1');
+//Siswa
+$routes->get('/siswa', 'Siswa\Siswa::index');
+$routes->get('/siswa/(:any)', 'Siswa\Siswa::$1');
+$routes->add('/controlsiswa/(:any)', 'Siswa\Controlsiswa::$1');
+
+
 $routes->get('/progres', 'Progres::index');
 $routes->get('/progres/(:any)', 'Progres::$1');
 

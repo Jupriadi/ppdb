@@ -14,13 +14,15 @@
                 <div class="card shadow ">
                     <div class="card-header bg-primary text-light mb-3">
                         <strong class="card-title"> <i class="bi bi-person-fill"></i> Tabel Data Guru</strong>
-                        <a href="/panel/formguru" class="btn  btn-sm btn-light position-absolute end-0 me-4 top-0 mt-4 rounded-pill d-none d-md-block"><i class="bi bi-plus-circle-fill"></i> Tambah Data</a>
+                        <a href="/guru/formguru" class="btn  btn-sm btn-light position-absolute end-0 me-4 top-0 mt-4 rounded-pill d-none d-md-block"><i class="bi bi-plus-circle-fill"></i> Tambah Data</a>
                     </div>
                     <div class="row container mt-3">
                         <div class="col-8 col-7 px-2 px-md-2 col-md-5 mb-3">
                             <div class="input-group mb-2 position-relative">
-                                <input type="text" class="form-control rounded-pill" placeholder="Cari">
-                                <!-- <span class="position-absolute top-50 start-0"><i class="bi bi-search"></i></span> -->
+                                <form action="" method="get" class="w-100">
+                                    <input name="q" type="text" class="form-control rounded-pill" placeholder="Cari">
+                                </form>
+                                <span class="position-absolute translate-middle me-2 top-50 end-0"><i class="bi bi-search"></i></span>
                             </div>
                         </div>
                         <div class="col-4 p-0 col-md-3 col-md-2">
@@ -59,28 +61,11 @@
                                         </div>
                                      </div>
                                      <div>
-                                        <a href="/panel/editguru/<?= $guru['idGuru'] ?>" class="btn bg-primary btn-sm text-light rounded-circle"><i class="bi bi-pencil-fill"></i></a>
+                                        <a href="/guru/formguru/<?= $guru['idGuru'] ?>" class="btn bg-primary btn-sm text-light rounded-circle"><i class="bi bi-pencil-fill"></i></a>
 
-                                        <a href="#hps-<?= $guru['idGuru'] ?>" data-bs-toggle="modal" class="btn bg-warning btn-sm text-light rounded-circle"><i class="bi bi-trash-fill"></i></a>
+                                        <a href="#confirmhapus" data-bs-toggle="modal" class="hapusguru btn bg-warning btn-sm text-light rounded-circle" data-id="$guru['idGuru"><i class="bi bi-trash-fill"></i></a>
                                      </div>
                                      <hr>
-                                </div>
-                            </div>
-                            
-                            <!-- Modal  Hapus Guru-->
-                            <div class="modal fade" id="hps-<?= $guru['idGuru'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-                                    <div class="modal-content">
-                                    <div class="modal-body text-center py-3 mb-4">
-                                        <div class="text-center text-danger" style="font-size:45pt;"><i class="bi bi-question-circle-fill"></i></div>
-                                        <span class="text-center">Apakah Anda Yakin Akan Menghapus Data.?</p>
-                                        <h3 class="text-center mg-3"><?= $guru['namaguru'] ?></h3>
-                                        <div class="text-center">
-                                            <button class="btn btn-primary rounded-pill" data-bs-dismiss="modal">Tidak <i class="bi bi-x-circle-fill"></i></button>
-                                            <a href="/panel/hapusguru/<?= $guru['idGuru'] ?>" class="btn btn-outline-primary rounded-pill px-4">Ya  <i class="bi bi-trash2-fill me-n4"></i></a>
-                                        </div>
-                                    </div>
-                                    </div>
                                 </div>
                             </div>
                             <?php endforeach; ?>
@@ -120,36 +105,26 @@
                                         <td><?= $guru['pendidikan']." ".$guru['jurusan'] ?></td>
                                         
                                         <td class="">
-                                            <a href="/panel/formguru/<?= $guru['idGuru'] ?>">
+                                            <a href="/guru/formguru/<?= $guru['idGuru'] ?>">
                                                 <i class="bi bi-pencil-fill"></i>
                                             </a>
-                                            <a href="#hapus-<?= $guru['idGuru'] ?>" data-bs-toggle="modal">
+                                            <a href="#confirmhapus" class="hapusguru" data-bs-toggle="modal" data-id="<?= $guru['idGuru'] ?>">
                                                 <i class="bi bi-trash-fill"></i>
                                             </a>
                                         </td>
                                     </tr>
-
-                                    <!-- Modal  Hapus Guru-->
-                                    <div class="modal fade" id="hapus-<?= $guru['idGuru'] ?>" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-                                        <div class="modal-content">
-                                          <div class="modal-body text-center py-3">
-                                            <div class="text-center text-danger" style="font-size:45pt;"><i class="bi bi-question-circle-fill"></i></div>
-                                            <span class="text-center">Apakah Anda Yakin Akan Menghapus Data.?</p>
-                                            <h3 class="text-center mg-3"><?= $guru['namaguru'] ?></h3>
-                                            <div class="text-center">
-                                                <button class="btn btn-primary rounded-pill" data-bs-dismiss="modal">Tidak <i class="bi bi-x-circle-fill"></i></button>
-                                                <a href="/progres/hapusguru/<?= $guru['idGuru'] ?>" class="btn btn-outline-primary rounded-pill px-4">Ya  <i class="bi bi-trash2-fill me-n4"></i></a>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-
                                     <?php endforeach; ?>
                                 </tbody>
                             </table>
                         </div>
+                        <?php if($dataguru == null): ?>
+                           <div class="text-center">
+                                <!-- <img  src="/assets/img/empty.gif" class="mx-auto" style="width:300px" alt=""> -->
+                                <br>
+                                <span>Tidak Ada Data Untuk Ditampilkan</span>
+                                <br> <a href="">Tampilkan Semua</a>
+                            </div>
+                        <?php endif; ?>
                     </div>
                 </div>
             </div>
@@ -160,11 +135,17 @@
 
 <div class="postion-absolute shadow d-md-none position-fixed me-4 mb-4 bg-success rounded-circle end-0 bottom-0"  style="width: 50px;height: 50px;">
     <div class="positon-relative">
-        <a href="/panel/formguru" class="text-light fs-1 position-absolute top-50 start-50 translate-middle">
+        <a href="/guru/formguru" class="text-light fs-1 position-absolute top-50 start-50 translate-middle">
             <i class="bi bi-plus-circle-dotted"></i>
         </a>
     </div>
 </div>
 
+<script>
+$(".hapusguru").click(function(){
+    const id = $(this).data('id');
+    $('#hapus').attr('href','controlguru/hapus/'+id);
+})
 
+</script>
 <?= $this->endSection(); ?>

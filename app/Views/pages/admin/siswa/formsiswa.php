@@ -7,7 +7,7 @@
      $("#siswa").addClass("active");
 </script>
 <hr>
-<form method="post" action="/progres/simpansiswa/<?= $edit>0 ? $siswa['idSiswa'] : '' ;?>" enctype="multipart/form-data">
+<form method="post" action="/controlsiswa/simpan/<?= $edit>0 ? $siswa['idSiswa'] : '' ;?>" enctype="multipart/form-data">
     <?= csrf_field() ?>
     <div class="container">
         <div class="row">
@@ -91,7 +91,7 @@
                             <div class="row text-center  my-3">
                                 <button type="submit" class="btn btn-success rounded-pill py-2">  Simpan</button>
 
-                                <a class="mt-3" href="/panel/siswa">Kembali</a>
+                                <a class="mt-3" href="/siswa">Kembali</a>
                             </div>
                         </div>
                     </div>
