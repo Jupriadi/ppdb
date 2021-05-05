@@ -1,7 +1,7 @@
 <?= $this->extend('templates/layout/userlayout'); ?>
 
 <?= $this->section('content') ?>
-<div class="hg-100  position-relative">
+<!-- <div class="hg-100  position-relative">
     <div id="carouselExampleControls" class="carousel slide myslide" data-bs-ride="carousel">
         <div class="carousel-inner ">
             <div class="carousel-item active">
@@ -23,10 +23,31 @@
             <span class="visually-hidden">Next</span>
         </button>
     </div>
-</div>
+</div> -->
+<section id="hero" class="min-hg-100 softgreen text-dark">
+    <div style="height:100%" class="hg-100 container">
+        <div class="row">
+            <div data-aos="fade-left" data-aos-duration="2000" class="col-md-6 text-center pt-5">
+                <img src="/assets/img/month.png" class="w-60 " alt=""><br>
+                <span class="title fs-3 px-5 py-2 rounded-pill text-dark bg-warning">Marhaban Ya Ramadhan</span>
+            </div>
+            <div data-aos="fade-left" data-aos-duration="800"  class="col-md-6 text-end position-relative">
+                <div class=" position-absolute pt-5 mt-5 w-80">
+                    <h2 class=" hero-title mt-3">SDIT SAID ALAMAIN</h2>
+                    <span class="hero-subtitle bg-warning px-3 py-2 rounded-pill shadow-sm">NW Sembalun Bumbung</span>
+                    <p class="mt-3 ms-5 ps-5">Yayasan Pendidikan Said Alamin Nahdlatul Wathan Sembalun Bumbung    </p>
+                    <hr>
+                    <button data-bs-toggle="modal" data-bs-target="#daftar" class="btn mt-5 btn-success px-4"> <i class="bi bi-arrow-left-circle"></i>   
+                        Daftar Sekarang
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <section class="" id="kepsek">
     <div class="container">
-        <h3 class="title text-center p-4">Sambutan Kepala Sekolah</h3>
+        <h3 class="title text-center p-4" data-aos="zoom-out" data-aos-duration="1000">Sambutan Kepala Sekolah</h3>
         <div class="row">
             <div class="col-md-6">
                 <div class="w-50 mx-auto">
@@ -203,7 +224,7 @@
 
       <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
 
-        <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+        <div class="col-lg-4 col-md-6 portfolio-item  filter-app">
           <div class="portfolio-wrap">
             <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
             <div class="portfolio-info">
@@ -332,7 +353,24 @@
       </div>
 
     </div>
-  </section><!-- End Portfolio Section -->
+  </section>
+  
+  <!-- End Portfolio Section -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
