@@ -30,7 +30,13 @@
      position: relative;
      overflow: hidden;
      margin: 10px;
+     width:150px;
+     height:150px;
  }
+ .fileUpload img{
+    width:100%;min-height:100%;
+ }
+
  input.upload {
      position: absolute;
      top: 0;

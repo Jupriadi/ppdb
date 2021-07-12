@@ -3,5 +3,5 @@
 <?= $this->include("templates/components/usertopbar") ?>
 <?= $this->renderSection('content') ?>
 
-<?= $this->include("templates/components/usermodal.html") ?>
+<?= $this->include("templates/components/usermodal") ?>
 <?= $this->include("templates/components/userfooter") ?>

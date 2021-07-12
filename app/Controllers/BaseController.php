@@ -37,7 +37,7 @@ class BaseController extends Controller
 	protected $guru;
 	protected $siswa;
 	protected $mapel;
-	public function __construct()
+	public function __constructor()
 	{
 		$this->profsek = new ProfsekModels;
 		$this->guru = new GuruModels;

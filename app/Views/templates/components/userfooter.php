@@ -19,7 +19,9 @@
             <div class="modal-content">
                 <div class="modal-body py-4">
                     <div class="text-center text-success" style="font-size:50pt;"><i class="bi bi-emoji-heart-eyes"></i></div>
-                    <p class="text-center">Data Berhasil Disimpan.!</p>
+                    <p class="text-center">
+                        <?= session()->getFlashData('saved') ?>
+                    </p>
                 </div>
             </div>
         </div>

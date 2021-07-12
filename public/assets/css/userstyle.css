@@ -177,6 +177,9 @@ div.info-box{
     background: rgb(193,208,2);
     background: linear-gradient(0deg, rgba(194, 208, 2, 0.034) 0%, rgba(211,221,2,0.44021358543417366) 100%);
 }
+.bg-softgreen{
+  background:  rgb(217, 224, 111) 0%;
+}
 .hero-title{
     font-family:Anton-Regular;
     font-size:38pt;
